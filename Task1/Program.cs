@@ -67,3 +67,22 @@ void Sumnumbers()
     int num = SetNumber("N");
     Console.WriteLine($"Сумма цифр - {GetSumNums(num)}");
 }
+
+
+int GetSumNums(int number)
+{
+    int sum = 0;
+
+    while (number > 0)
+    {
+        sum += number % 10;
+        number /=10;
+    }
+
+    return sum;
+}
+//end
+
+//Напишите программу, которая задаёт массив 
+//из введённого числа и выводит их на экран.
+
