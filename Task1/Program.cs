@@ -37,5 +37,5 @@ void MyPow()
 
     int degree = SetNumber("degree of");
 
-    System.Console.WriteLine{$"{num} в степени {degree} - {Pow(num, degree)}"};
+    Console.WriteLine{$"{num} в степени {degree} - {Pow(num, degree)}"};
 }
