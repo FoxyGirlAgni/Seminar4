@@ -57,3 +57,13 @@ int Pow(int num, int rank)
     return result;
 }
 //end
+
+//Напишите программу, которая принимает 
+//на вход число и выдаёт сумму цифр в числе.
+void Sumnumbers()
+{
+    Console.Clear();
+
+    int num = SetNumber("N");
+    Console.WriteLine($"Сумма цифр - {GetSumNums(num)}");
+}
