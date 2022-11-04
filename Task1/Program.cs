@@ -85,4 +85,13 @@ int GetSumNums(int number)
 
 //Напишите программу, которая задаёт массив 
 //из введённого числа и выводит их на экран.
+void ViewArray()
+{
 
+    Console.Clear();
+    int size = SetNumber("size");
+    int minValue = SetNumber("minValue");
+    int maxValue = SetNumber("maxValue");
+    int[] array = GetRandomArray(size, minValue, maxValue);
+    Console.WriteLine($"[{String.Join(",", array)}]");
+}
