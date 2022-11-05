@@ -1,5 +1,4 @@
-﻿Start();
-
+Start();
 
 void Start()
 {
@@ -104,13 +103,3 @@ int[] GetRandomArray(int size, int minValue, int maxValue);
     {
         result[i] = new Random().Next(minValue, maxValue);
     }
-
-    return result;
-}
-//end
-int SetNumber(string numberName)
-{
-    Console.Write($"Enter number {numberName}: ");
-    int num = Convert.ToInt32(Console.ReadLine());
-    return num;
-}
