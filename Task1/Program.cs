@@ -27,13 +27,6 @@ void Start()
 }
 //Напишите цикл, который принимает на вход два числа (A и B)
 //и возводит число A в натуральную степень B. 
-void Sumnumbers()
-{
-    Console.Clear();
-
-    int num = SetNumber("N");
-    Console.WriteLine($"Сумма цифр - {GetSumNums(num)}");
-}
 
 void MyPow()
 {
@@ -44,7 +37,7 @@ void MyPow()
 
     int degree = SetNumber("degree of");
 
-    Console.WriteLine {$"{num} в степени {degree} = {Pow(num, degree)}"};
+    Console.WriteLine($"{num} в степени {degree} = {Pow(num, degree)}");
 }
 
 
@@ -53,10 +46,10 @@ int Pow(int num, int rank)
 {
     if (rank == 0) return 1;
     else if (rank == 1) return num;
-
-    int result = num;
-
-    for (int i = 2; i <= rank; i++)
+    
+      int result = num;
+    
+      for (int i = 2; i <= rank; i++)
     {
         result *= num;
     }
@@ -67,12 +60,12 @@ int Pow(int num, int rank)
 
 //Напишите программу, которая принимает 
 //на вход число и выдаёт сумму цифр в числе.
-void Sumnumbers(int n)
+void SumNumbers()
 {
     Console.Clear();
 
     int num = SetNumber("N");
-    Console.WriteLine($"Сумма цифр - {GetSumNums(num)}");
+    Console.WriteLine($"Сумма цифр = {GetSumNums(num)}");
 }
 
 
@@ -107,7 +100,6 @@ void ViewArray()
 int[] GetRandomArray(int size, int minValue, int maxValue);
 {
     int[] result = new int[size];
-   
     for (int i = 0; i < size; i++)
     {
         result[i] = new Random().Next(minValue, maxValue);
