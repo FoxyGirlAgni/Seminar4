@@ -19,7 +19,7 @@ void Start()
         {
             case 0: return; break;
             case 25: MyPow(); break;
-            case 27: SunNumbers(); break;
+            case 27: SumNumbers(); break;
             case 29: ViewArray(); break;
             default: System.Console.WriteLine("error"); break;
         }
@@ -27,6 +27,13 @@ void Start()
 }
 //Напишите цикл, который принимает на вход два числа (A и B)
 //и возводит число A в натуральную степень B. 
+void Sumnumbers()
+{
+    Console.Clear();
+
+    int num = SetNumber("N");
+    Console.WriteLine($"Сумма цифр - {GetSumNums(num)}");
+}
 
 void MyPow()
 {
@@ -37,7 +44,7 @@ void MyPow()
 
     int degree = SetNumber("degree of");
 
-    Console.WriteLine{$"{num} в степени {degree} - {Pow(num, degree)}"};
+    Console.WriteLine {$"{num} в степени {degree} = {Pow(num, degree)}"};
 }
 
 
@@ -60,7 +67,7 @@ int Pow(int num, int rank)
 
 //Напишите программу, которая принимает 
 //на вход число и выдаёт сумму цифр в числе.
-void Sumnumbers()
+void Sumnumbers(int n)
 {
     Console.Clear();
 
@@ -84,7 +91,7 @@ int GetSumNums(int number)
 //end
 
 //Напишите программу, которая задаёт массив 
-//из введённого числа и выводит их на экран.
+//из 8 элементов и выводит их на экран.
 void ViewArray()
 {
 
@@ -100,6 +107,7 @@ void ViewArray()
 int[] GetRandomArray(int size, int minValue, int maxValue);
 {
     int[] result = new int[size];
+   
     for (int i = 0; i < size; i++)
     {
         result[i] = new Random().Next(minValue, maxValue);
