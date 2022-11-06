@@ -1,8 +1,9 @@
-Start();
+﻿Start();
 
 void Start()
 {
-    while (true)
+    bool isEnd = false;
+    while (isEnd == false)
     {
         Console.ReadLine();
         Console.Clear();
@@ -16,7 +17,7 @@ void Start()
 
         switch (numTask)
         {
-            case 0: return; break;
+            case 0:isEnd = true; break;
             case 25: MyPow(); break;
             case 27: SumNumbers(); break;
             case 29: ViewArray(); break;
@@ -24,6 +25,13 @@ void Start()
         }
     }
 }
+int SetNumber(string numberName)
+{
+    Console.Write($"Enter number {numberName}: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+    return num;
+}
+
 //Напишите цикл, который принимает на вход два числа (A и B)
 //и возводит число A в натуральную степень B. 
 
@@ -58,7 +66,7 @@ int Pow(int num, int rank)
 //end
 
 //Напишите программу, которая принимает 
-//на вход число и выдаёт сумму цифр в числе.
+//на вход число N и выдаёт сумму цифр в числе.
 void SumNumbers()
 {
     Console.Clear();
@@ -83,23 +91,25 @@ int GetSumNums(int number)
 //end
 
 //Напишите программу, которая задаёт массив 
-//из 8 элементов и выводит их на экран.
+//из элементов и выводит их на экран.
 void ViewArray()
 {
+int lenArray = ReadInt("Введите длинну массива: ");
 
-    Console.Clear();
-    int size = SetNumber("size");
-    int minValue = SetNumber("minValue");
-    int maxValue = SetNumber("maxValue");
-    int[] array = GetRandomArray(size, minValue, maxValue);
-    Console.WriteLine($"[{String.Join(",", array)}]");
+int[] randomArray = new int[lenArray];
+for (int i = 0; i < randomArray.Length; i++)
+{
+    randomArray[i] = new Random().Next(1,9);
+    Console.Write(randomArray[i] + " ");
 }
 
 
-int[] GetRandomArray(int size, int minValue, int maxValue);
+// Функция ввода
+int ReadInt(string message)
 {
-    int[] result = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        result[i] = new Random().Next(minValue, maxValue);
-    }
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+
+}
+}
+// //end
